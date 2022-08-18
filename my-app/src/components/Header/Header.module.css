@@ -1,0 +1,13 @@
+.header {
+    background-color: grey;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 10px;
+
+}
+
+.title {
+
+}
