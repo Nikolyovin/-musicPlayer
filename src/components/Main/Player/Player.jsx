@@ -1,9 +1,10 @@
 import styles from "./Player.module.css"
+import Songs from "./Songs/Songs"
 
 const Player = () => {
     return (
-        <div>
-           <span>Player</span>
+        <div className = { styles.playerWrap}>
+           <Songs/>
         </div>
     )
 }

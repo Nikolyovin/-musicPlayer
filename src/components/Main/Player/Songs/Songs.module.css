@@ -1,0 +1,25 @@
+.songWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.songInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cover {
+    border: 2px solid black;
+    width: 50px;
+}
+
+.nameSong,
+.nameBand {
+    display: block;
+}
+
+.songOtherInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}

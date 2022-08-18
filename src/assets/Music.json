@@ -1,0 +1,74 @@
+{
+    "music": [
+        {
+            "name": "Danheim",
+            "band": "Framganga",
+            "duration": "3:21",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/1"
+        },
+        {
+            "name": "Карамультук",
+            "band": "25-17",
+            "duration": "3:35",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/2"
+        },
+        {
+            "name": "TOKYO HOUSE",
+            "band": "$ B, SHADXWBXRN",
+            "duration": "1:59",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/3"
+        },
+        {
+            "name": "Danger",
+            "band": "Deathpact",
+            "duration": "3:03",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/4"
+        },
+        {
+            "name": "Venom",
+            "band": "DXRTYTYPE",
+            "duration": "2:10",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/5"
+        },
+        {
+            "name": "Iron Sharpens Iron",
+            "band": "Shades",
+            "duration": "2:34",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/6"
+        },
+        {
+            "name": "Ksv",
+            "band": "Soft Blade",
+            "duration": "3:18",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/7"
+        },
+        {
+            "name": "Warp",
+            "band": "Steve Aoki ",
+            "duration": "3:10",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/8"
+        },
+        {
+            "name": "Железная машина",
+            "band": "Зараза feat. Loc-Dog",
+            "duration": "3:22",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/9"
+        },
+        {
+            "name": "Электронная музыка",
+            "band": "Зараза",
+            "duration": "2:02",
+            "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
+            "track": "./traks/10"
+        }
+    ]
+}
