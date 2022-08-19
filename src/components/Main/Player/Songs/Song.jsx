@@ -1,20 +1,37 @@
 import styles from "./Songs.module.css"
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { Typography } from "@mui/material"
+import { grey } from "@mui/material/colors"
+import { useDispatch } from "react-redux"
+import { addLike } from "../../../../redux/playerReducer"
 
-const Song = ({ name, band }) => {
-    console.log(name, band)
-    return <div className = { styles.songWrap }>
+const Song = ({ name, band, cover, duration, isLike, id }) => {
+    const dispatch = useDispatch()
+    return <div className = { styles.songWrap } onClick = { () => dispatch(addLike(id)) } >
         <div className = { styles.songInfo }>
-            <div className = { styles.cover}></div>
+            <img src = { cover } className = { styles.cover}/>
             <div className = { styles.text }>
-                <span className = { styles.nameSong }> { name } </span>
-                <span className = { styles.nameBand }> { band } </span>
+                <Typography component="div" variant="body2" color="#fafafa">
+                    { name }
+                </Typography>
+                <Typography variant="body2" color="#9e9e9e" component="div">
+                    { band }
+                </Typography>
             </div>
         </div>
         <div className = { styles.songOtherInfo } >
-            <div className = { styles.like } > * </div>
-            <div className = { styles.duration } > 2:20</div>
+            { 
+                isLike
+                ? <FavoriteIcon sx={{ color: grey[500] }}/>
+                : <FavoriteBorderIcon sx={{ color: grey[500] }}/>
+            }
+            <Typography variant="body2" color="#9e9e9e" component="div">
+                { duration }
+            </Typography>
         </div>
     </div>
             
 }
+
 export default Song

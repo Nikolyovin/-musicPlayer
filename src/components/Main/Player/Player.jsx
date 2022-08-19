@@ -16,7 +16,7 @@ const Player = () => {
     {
         if (songs) return (
             <div className = { styles.playerWrap}>
-            <Songs songs = {songs} />
+                <Songs songs = {songs} />
             </div>
     )}
 }

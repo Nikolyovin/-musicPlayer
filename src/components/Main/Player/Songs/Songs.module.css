@@ -1,6 +1,8 @@
 .songWrap {
     display: flex;
     justify-content: space-between;
+    background-color: #212121;
+    cursor: pointer;
 }
 
 .songInfo {
@@ -13,6 +15,13 @@
     width: 50px;
 }
 
+.text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px 5px 10px 5px;
+}
+
 .nameSong,
 .nameBand {
     display: block;
@@ -21,5 +30,7 @@
 .songOtherInfo {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100px;
+    padding: 10px 5px 10px 5px;
 }
