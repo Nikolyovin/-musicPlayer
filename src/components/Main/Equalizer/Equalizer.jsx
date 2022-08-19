@@ -3,7 +3,7 @@ import styles from "./Equalizer.module.css"
 const Equalizer = () => {
     return (
         <div className = { styles.equalizerWrap}>
-            <spna>Equalizer</spna>
+            <span>Equalizer</span>
         </div>
     )
 }

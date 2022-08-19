@@ -1,8 +1,8 @@
-import { createStore } from "redux"
+import { combineReducers, createStore } from "redux"
 import playerReducer from "./playerReducer"
 
-const reducers = {
+const reducers = combineReducers({
     player: playerReducer
-}
+})
 
-const store = createStore(reducers)
+export const store = createStore(reducers)
