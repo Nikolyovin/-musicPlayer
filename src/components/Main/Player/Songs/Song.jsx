@@ -8,7 +8,7 @@ import { addLike } from "../../../../redux/playerReducer"
 
 const Song = ({ name, band, cover, duration, isLike, id }) => {
     const dispatch = useDispatch()
-    return <div className = { styles.songWrap } onClick = { () => dispatch(addLike(id)) } >
+    return <div className = { styles.songWrap } >
         <div className = { styles.songInfo }>
             <img src = { cover } className = { styles.cover}/>
             <div className = { styles.text }>
@@ -23,8 +23,8 @@ const Song = ({ name, band, cover, duration, isLike, id }) => {
         <div className = { styles.songOtherInfo } >
             { 
                 isLike
-                ? <FavoriteIcon sx={{ color: grey[500] }}/>
-                : <FavoriteBorderIcon sx={{ color: grey[500] }}/>
+                ? <FavoriteIcon sx={{ color: grey[500] }} onClick = { () => dispatch(addLike(id)) }/>
+                : <FavoriteBorderIcon sx={{ color: grey[500] }} onClick = { () => dispatch(addLike(id)) }/>
             }
             <Typography variant="body2" color="#9e9e9e" component="div">
                 { duration }

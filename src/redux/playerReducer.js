@@ -9,22 +9,20 @@ const initialState = {
     music: []
 }
 
-const playerReducer = ( state = initialState, action ) => {
+const playerReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_SONGS:
             return { ...state.state, music: requestMusic }
 
         case ADD_LIKE:
-            console.log('action:', action)
-            console.log('state:', state)
-            const res = state.music.filter(item => item.id === action.songId).map(item => {
-                /* if (item.id === action.songId) */ return {...item, isLike:!item.isLike }
-                 
-            })
-            console.log('res:', res)
-            return { ...state.state,   }
+            return {
+                ...state, music: state.music.map(song => {
+                    if (song.id === action.songId) return { ...song, isLike: !song.isLike }
+                    return song
+                })
+            }
 
-        default: 
+        default:
             return { state }
     }
 }
