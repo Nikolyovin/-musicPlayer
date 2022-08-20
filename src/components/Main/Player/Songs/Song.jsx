@@ -4,12 +4,12 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import { Typography } from "@mui/material"
 import { grey } from "@mui/material/colors"
 import { useDispatch } from "react-redux"
-import { addLike } from "../../../../redux/playerReducer"
+import { addLike, playtrack } from "../../../../redux/playerReducer"
 
 const Song = ({ name, band, cover, duration, isLike, id }) => {
     const dispatch = useDispatch()
     return <div className = { styles.songWrap } >
-        <div className = { styles.songInfo }>
+        <div className = { styles.songInfo } onClick = { () => dispatch(playtrack(id)) }>
             <img src = { cover } className = { styles.cover}/>
             <div className = { styles.text }>
                 <Typography component="div" variant="body2" color="#fafafa">

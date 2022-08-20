@@ -5,7 +5,7 @@
             "band": "Framganga",
             "duration": "3:21",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/1",
+            "track": "track1",
             "isLike": true,
             "id": "1"
         },
@@ -14,7 +14,7 @@
             "band": "25-17",
             "duration": "3:35",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/2",
+            "track": "track2",
             "isLike": false,
             "id": "2"
         },
@@ -23,7 +23,7 @@
             "band": "$ B, SHADXWBXRN",
             "duration": "1:59",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/3",
+            "track": "track3",
             "isLike": true,
             "id": "3"
         },
@@ -32,7 +32,7 @@
             "band": "Deathpact",
             "duration": "3:03",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/4",
+            "track": "track4",
             "isLike": true,
             "id": "4"
         },
@@ -41,7 +41,7 @@
             "band": "DXRTYTYPE",
             "duration": "2:10",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/5",
+            "track": "track5",
             "isLike": true,
             "id": "5"
         },
@@ -50,7 +50,7 @@
             "band": "Shades",
             "duration": "2:34",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/6",
+            "track": "track6",
             "isLike": false,
             "id": "6"
         },
@@ -59,7 +59,7 @@
             "band": "Soft Blade",
             "duration": "3:18",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/7",
+            "track": "track7",
             "isLike": false,
             "id": "7"
         },
@@ -68,7 +68,7 @@
             "band": "Steve Aoki ",
             "duration": "3:10",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/8",
+            "track": "track8",
             "isLike": false,
             "id": "8"
         },
@@ -77,7 +77,7 @@
             "band": "Зараза feat. Loc-Dog",
             "duration": "3:22",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/9",
+            "track": "track9",
             "isLike": false,
             "id": "9"
         },
@@ -86,7 +86,7 @@
             "band": "Зараза",
             "duration": "2:02",
             "cover": "https://lens.google.com/search?p=AV3Y9tDIOAPOb5YKvzM7Bye2m8NJ5WKmvdJiAHhOxP6EsLFygs8WzydrV4N0Q1370wRmbtvtv4kLsFNkxW7sNj7rAgoCpKJ_dFhKpVC7RyM63HSexShNwk24OkFwOF_Qvkqz_vKnkqhVnYNoVjze95UqtSd1lWN7JNXWsCWsoDKG2gUGPBDbB6R3CzLijJTrqT_XGs3Wr5bRTOGJA6b5SFWu3jTLEN0W3LMXAPicUa9GqgMtwBp3aDd4GCatRIKbFgE%3D&s=csp&ep=ccm&pli=1#lns=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsIkVrY0tKR0kxWkRZek1UZ3lMVFkyTldFdE5HRmhOUzFoTjJZd0xXRTFZVGxqTXpSbU5EZGpOaElmYXpnd2J6QlRjRWhGUm5Oa05FaEZlRmhpTFdJNVpVSTNhRTR3WkV0NFp3PT0iXQ==",
-            "track": "./traks/10",
+            "track": "track10",
             "isLike": true,
             "id": "10"
         }
