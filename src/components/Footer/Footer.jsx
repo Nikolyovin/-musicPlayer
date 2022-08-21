@@ -25,7 +25,7 @@ const Footer = () => {
 
     return (
         <div>
-            <ProgressBar track={track}/>
+            {/* <ProgressBar track={track}/> */}
             <AudioPlayer/>
         </div>
     )
