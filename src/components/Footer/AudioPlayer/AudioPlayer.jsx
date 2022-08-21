@@ -15,6 +15,7 @@ const AudioPlayer = () => {
 
     const track = useSelector((state) => state.player.activeTrack?.track) 
     console.log('track:', track)
+    
 
     // const trackUrl = "https://cdn.simplecast.com/audio/cae8b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3";
     // const trackUrl2 ="https://cdn.simplecast.com/audio/cae7b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3";
@@ -25,9 +26,14 @@ const AudioPlayer = () => {
     const progressBar = useRef();   // reference our progress bar
     const animationRef = useRef();  // reference the animation
 
-    if (audioPlayer.current) audioPlayer.current.load()
+    useEffect(() => {    
+        audioPlayer.current?.pause()
+        audioPlayer.current?.load();
+        // audioPlayer.current?.play()
+        console.log('audioPlayer.current:', audioPlayer.current)
+      }, [track]);
     
-    
+    //   src/assets/tracks/1.mp3
 
     //динамическое изменение песни
     // useEffect(() => {
@@ -98,8 +104,9 @@ const AudioPlayer = () => {
     return (
             <div className={styles.audioPlayer}>
                 <input type="range" defaultValue={0} ref = {progressBar} onChange={changeRange} className={styles.progressBar}/>
-                <audio  onLoadedMetadata={onLoadedMetadata} className={styles.audio} ref={audioPlayer} src={track} type="audio/mp3" controls></audio>
-                
+                <audio preload="auto" autoplay onLoadedMetadata={onLoadedMetadata} className={styles.audio} ref={audioPlayer} src={track} type="audio/mpeg" controls></audio>
+                <audio src = 'https://cdn.simplecast.com/audio/cae8b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3' controls></audio>
+                {/* <img src = './Screen Shot 2019-04-25 at 18.33.48.png'></img> */}
                 <button onClick={togglePlayPause}>{isPlaying ? "Pause" : "Play"}</button>
                 {/* current time */}
                 <div>{calculateTime(currentTime)}</div>
