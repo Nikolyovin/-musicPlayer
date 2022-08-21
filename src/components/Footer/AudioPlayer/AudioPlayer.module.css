@@ -5,28 +5,29 @@
 .progressBar {
     --bar-bg: #ffe3d4;
     --seek-before-width: 0;
-    --seek-before-color: #ffc2a1;
+    --seek-before-color: #bf360c;
     --knobby: #3452a5;
     --selectedKnobby: #26c9c3;
+    --bar-height: 15px;
 
     appearance: none;
     background: var(--bar-bg);
     ;
-    border-radius: 10px;
     position: relative;
     width: 100%;
-    height: 11px;
+    height: var(--bar-height);
     outline: none;
+    margin: 0;
+    display: block;
 }
 
 /* progress bar - safari */
 .progressBar::-webkit-slider-runnable-track {
     background: var(--bar-bg);
     ;
-    border-radius: 10px;
     position: relative;
     width: 100%;
-    height: 11px;
+    height: var(--bar-height);
     outline: none;
 }
 
@@ -34,10 +35,9 @@
 .progressBar::-moz-range-track {
     background: var(--bar-bg);
     ;
-    border-radius: 10px;
     position: relative;
     width: 100%;
-    height: 11px;
+    height: var(--bar-height);
     outline: none;
 }
 
@@ -48,11 +48,9 @@
 /* progress bar - chrome and safari */
 .progressBar::before {
     content: '';
-    height: 11px;
+    height: var(--bar-height);
     width: var(--seek-before-width);
     background-color: var(--seek-before-color);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -63,14 +61,12 @@
 /* progress bar - firefox */
 .progressBar::-moz-range-progress {
     background-color: var(--seek-before-color);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    height: 11px;
+    height: var(--bar-height);
 }
 
 /* knobby - chrome and safari */
 .progressBar::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     height: 15px;
     width: 15px;
     border-radius: 50%;
@@ -80,7 +76,9 @@
     position: relative;
     margin: -2px 0 0 0;
     z-index: 3;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+
+    visibility: hidden;
 }
 
 /* knobby while dragging - chrome and safari */
@@ -91,15 +89,7 @@
 
 /* knobby - firefox */
 .progressBar::-moz-range-thumb {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: transparent;
-    background-color: var(--knobby);
-    cursor: pointer;
-    position: relative;
-    z-index: 3;
-    box-sizing: border-box;
+    visibility: hidden;
 }
 
 /* knobby while dragging - firefox */
