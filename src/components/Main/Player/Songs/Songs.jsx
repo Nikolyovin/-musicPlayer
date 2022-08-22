@@ -15,6 +15,8 @@ const Songs = ({ songs }) => {
             duration = { item.duration }
             cover = { item.cover }
             isLike = { item.isLike }
+            track = {item.track}
+            // props = {...item}
         />)}
     </>
     

@@ -12,7 +12,7 @@ const Player = () => {
     }, [])
 
     const songs = useSelector((state) => state.player.music) 
-
+    console.log('songs', songs)
     {
         if (songs) return (
             <div className = { styles.playerWrap}>

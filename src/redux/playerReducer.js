@@ -11,7 +11,6 @@ const initialState = {
 }
 
 const playerReducer = (state = initialState, action) => {
-    console.log('state1:', state)
     switch (action.type) {
         case SET_SONGS:
             return { ...state.state, music: requestMusic }
@@ -26,10 +25,9 @@ const playerReducer = (state = initialState, action) => {
 
         case PLAY_TRACK:
             const activeTrack = state.music.find(song => song.id === action.songId)
-            console.log('activeTrack:', activeTrack)
             return {
                 ...state, activeTrack
-            } /* && !console.log('state2:', state) */
+            }
 
         default:
             return { state }

@@ -14,17 +14,9 @@ import { useSelector } from "react-redux";
 import AudioPlayer from "./AudioPlayer/AudioPlayer";
 
 const Footer = () => {
-    const track = useSelector((state) => state.player.activeTrack) 
-    const arr = [track1, track2, track3, track4, track5, track6, track7, track8, track9, track10]
-    // const currentTrack = arr.find(item => item == track)
-    // console.log('currentTrack:', currentTrack)
-    // console.log('track:', track)
-    // useEffect(() => {
-    //     dispatch(setSongs())
-    // }, [])
 
     return (
-        <div>
+        <div className={styles.footer}>
             {/* <ProgressBar track={track}/> */}
             <AudioPlayer/>
         </div>
