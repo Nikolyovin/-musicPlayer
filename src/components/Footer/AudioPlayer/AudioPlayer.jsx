@@ -1,6 +1,8 @@
 import styles from "./AudioPlayer.module.css"
 import { useEffect, useRef, useState } from "react"
 import { useSelector } from "react-redux"
+import { calculateTime } from "../../../lib/helpers"
+import MusicCard from "../../Main/Player/Songs/MusicCard/MusicCard"
 
 //www.w3schools.com html reference audio/video
 const AudioPlayer = () => {
@@ -8,7 +10,9 @@ const AudioPlayer = () => {
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
 
-    const track = useSelector((state) => state.player.activeTrack?.track) 
+    const track = useSelector((state) => state.player.activeTrack) 
+    const source = track?.track
+    // const {name, band, id, cover} = track
 
     const audioPlayer = useRef();   // reference our audio component
     const progressBar = useRef();   // reference our progress bar
@@ -25,14 +29,6 @@ const AudioPlayer = () => {
         const seconds = Math.floor(audioPlayer.current.duration);
         setDuration(seconds);
         progressBar.current.max = seconds;              //делаем максимальное значение прогрессбара равное продолжительности трека
-    }
-    
-    const calculateTime = (secs) => {
-        const minutes = Math.floor(secs / 60)
-        const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`
-        const seconds = Math.floor(secs % 60)
-        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`
-        return `${returnedMinutes}:${returnedSeconds}`
     }
 
     const togglePlayPause = () =>{
@@ -78,13 +74,16 @@ const AudioPlayer = () => {
                 onLoadedMetadata={onLoadedMetadata} 
                 className={styles.audio} 
                 ref={audioPlayer} 
-                src={track} 
+                src={source} 
                 type="audio/mpeg" 
                 controls 
             />
             <button onClick={togglePlayPause}>
                 {isPlaying ? "Pause" : "Play"}
             </button>
+            <MusicCard 
+                track = {track}
+            />
             <div>
                 {calculateTime(currentTime)}
             </div>

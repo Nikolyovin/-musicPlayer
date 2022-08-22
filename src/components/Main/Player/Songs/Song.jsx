@@ -6,6 +6,8 @@ import { grey } from "@mui/material/colors"
 import { useDispatch } from "react-redux"
 import { addLike, playtrack } from "../../../../redux/playerReducer"
 import { useEffect, useRef, useState } from "react"
+import { calculateTime } from "../../../../lib/helpers"
+import MusicCard from "./MusicCard/MusicCard"
 
 const Song = ({ name, band, cover, isLike, id, track }) => {
     const dispatch = useDispatch()
@@ -16,28 +18,30 @@ const Song = ({ name, band, cover, isLike, id, track }) => {
     //     setDuration(audioRef.current.duration)
     // }, [])
     const onLoadedMetadata = () => {
-        
-        setDuration(audioRef.current.duration);
-                    //делаем максимальное значение прогрессбара равное продолжительности трека
+        setDuration(audioRef.current.duration) //делаем максимальное значение прогрессбара равное продолжительности трека
+                    
     }
 
-    console.log("audioRef.current:", audioRef)
     return (
         <>
-            <audio onLoadedMetadata ={onLoadedMetadata} src={track} ref = {audioRef} autoplay />           {/* нужно чтобы достать duration */}
+            <audio                                      /* нужно чтобы достать duration */
+                onLoadedMetadata = { onLoadedMetadata } 
+                src = { track } 
+                ref = { audioRef } 
+                autoplay 
+            />           
             <div className = { styles.songWrap } >
-                <div className = { styles.songInfo } onClick = { () => dispatch(playtrack(id)) }>
-                    <img src = { cover } className = { styles.cover}/>
-                    <div className = { styles.text }>
-                        <Typography component="div" variant="body2" color="#fafafa">
-                            { name }
-                        </Typography>
-                        <Typography variant="body2" color="#9e9e9e" component="div">
-                            { band }
-                        </Typography>
-                    </div>
-                </div>
-                
+                { track
+                ? 
+                    <MusicCard 
+                    name = { name } 
+                    band = { band } 
+                    cover = { cover }
+                    id = { id }  
+                    //  track={track}
+                />
+                : <></> 
+            }
                 <div className = { styles.songOtherInfo } >
                     { 
                         isLike
@@ -45,7 +49,7 @@ const Song = ({ name, band, cover, isLike, id, track }) => {
                         : <FavoriteBorderIcon sx={{ color: grey[500] }} onClick = { () => dispatch(addLike(id)) }/>
                     }
                     <Typography variant="body2" color="#9e9e9e" component="div">
-                        { duration }
+                        { calculateTime(duration) }
                     </Typography>
                 </div>
             </div>
