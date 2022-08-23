@@ -2,7 +2,10 @@ import styles from "./AudioPlayer.module.css"
 import { useEffect, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import { calculateTime } from "../../../lib/helpers"
-import MusicCard from "../../Main/Player/Songs/MusicCard/MusicCard"
+import { Typography } from "@mui/material"
+import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import PauseIcon from '@mui/icons-material/Pause'
+import { grey } from "@mui/material/colors"
 
 //www.w3schools.com html reference audio/video
 const AudioPlayer = () => {
@@ -10,9 +13,8 @@ const AudioPlayer = () => {
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
 
-    const track = useSelector((state) => state.player.activeTrack) 
-    const source = track?.track
-    // const {name, band, id, cover} = track
+    const currentTrack = useSelector((state) => state.player.activeTrack) 
+    const source = currentTrack?.track
 
     const audioPlayer = useRef();   // reference our audio component
     const progressBar = useRef();   // reference our progress bar
@@ -23,10 +25,10 @@ const AudioPlayer = () => {
         // audioPlayer.current?.pause()
         audioPlayer.current?.load()
         // audioPlayer.current?.play()
-      }, [track]);
+    }, [currentTrack]);
 
     const onLoadedMetadata = () => {
-        const seconds = Math.floor(audioPlayer.current.duration);
+        const seconds = Math.floor(audioPlayer.current.duration)
         setDuration(seconds);
         progressBar.current.max = seconds;              //делаем максимальное значение прогрессбара равное продолжительности трека
     }
@@ -78,18 +80,19 @@ const AudioPlayer = () => {
                 type="audio/mpeg" 
                 controls 
             />
-            <button onClick={togglePlayPause}>
-                {isPlaying ? "Pause" : "Play"}
-            </button>
-            <MusicCard 
-                track = {track}
-            />
-            <div>
-                {calculateTime(currentTime)}
+            <div className = { styles.button } onClick={togglePlayPause}>
+                {isPlaying ? <PauseIcon sx={{ color: grey[500] }}/> : <PlayArrowIcon sx={{ color: grey[500] }}/>}
             </div>
-            <div>
-                {(duration && !isNaN(duration)) && calculateTime(duration)} {/* убираем ошибку nan nan когда пытается отобразить, до того как загружается */}
-            </div> 
+            <Typography variant="body2" color="#fafafa" component="div">
+                <div className = { styles.currentTime }>
+                    {calculateTime(currentTime)}
+                </div>
+            </Typography>
+            <Typography variant="body2" color="#fafafa" component="div">
+                <div className = { styles.duration }>
+                    {(duration && !isNaN(duration)) && calculateTime(duration)} {/* убираем ошибку nan nan когда пытается отобразить, до того как загружается */}
+                </div> 
+            </Typography>
         </div>
     )
 }

@@ -8,14 +8,15 @@ const Songs = ({ songs }) => {
     
     return <> 
         { songs.map(item => <Song 
-            id = { item.id } 
+            // id = { item.id } 
             key = { item.id } 
-            name = { item.name } 
-            band = { item.band } 
-            duration = { item.duration }
-            cover = { item.cover }
-            isLike = { item.isLike }
-            track = {item.track}
+            // name = { item.name } 
+            // band = { item.band } 
+            // duration = { item.duration }
+            // cover = { item.cover }
+            // isLike = { item.isLike }
+            // track = {item.track}
+            currentTrack = { item }
             // props = {...item}
         />)}
     </>

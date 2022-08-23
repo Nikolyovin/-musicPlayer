@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className = { styles.header }>
             <Typography component="div" variant="h4" color="#fafafa">
-            Homemade Audio Player 
+                Homemade Audio Player 
             </Typography>
         </header>
     )

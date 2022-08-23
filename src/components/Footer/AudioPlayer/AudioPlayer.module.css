@@ -3,12 +3,12 @@
 }
 
 .progressBar {
-    --bar-bg: #ffe3d4;
+    --bar-bg: #757575;
     --seek-before-width: 0;
     --seek-before-color: #bf360c;
     --knobby: #3452a5;
     --selectedKnobby: #26c9c3;
-    --bar-height: 15px;
+    --bar-height: 30px;
 
     appearance: none;
     background: var(--bar-bg);
@@ -96,4 +96,28 @@
 .progressBar:active::-moz-range-thumb {
     transform: scale(1.2);
     background: var(--selectedKnobby);
+}
+
+/* current time for progress bar */
+.currentTime{
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    z-index: 3;
+}
+
+.duration{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    z-index: 3;
+}
+
+.button{
+    background-color: #212121;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
 }

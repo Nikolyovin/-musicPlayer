@@ -9,17 +9,17 @@ import { useEffect, useRef, useState } from "react"
 import { calculateTime } from "../../../../lib/helpers"
 import MusicCard from "./MusicCard/MusicCard"
 
-const Song = ({ name, band, cover, isLike, id, track }) => {
+const Song = ({ currentTrack }) => {
     const dispatch = useDispatch()
     const audioRef = useRef()
     const [duration, setDuration] = useState(0)
-
+    const { track, isLike, id } = currentTrack
+    // console.log("props:", props) 
     // useEffect(() => {
     //     setDuration(audioRef.current.duration)
     // }, [])
     const onLoadedMetadata = () => {
         setDuration(audioRef.current.duration) //делаем максимальное значение прогрессбара равное продолжительности трека
-                    
     }
 
     return (
@@ -31,17 +31,13 @@ const Song = ({ name, band, cover, isLike, id, track }) => {
                 autoplay 
             />           
             <div className = { styles.songWrap } >
-                { track
-                ? 
                     <MusicCard 
-                    name = { name } 
-                    band = { band } 
-                    cover = { cover }
-                    id = { id }  
-                    //  track={track}
-                />
-                : <></> 
-            }
+                        // name = { name } 
+                        // band = { band } 
+                        // cover = { cover }
+                        // id = { id }  
+                        currentTrack = { currentTrack }
+                    />
                 <div className = { styles.songOtherInfo } >
                     { 
                         isLike
