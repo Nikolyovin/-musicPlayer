@@ -1,0 +1,25 @@
+.buttonWrap {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 30px 20px 30px;
+}
+
+.button {
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+}
+
+.button:hover {
+    background-color: #424242;
+    transition: 0.5s
+}
+
+.button:active {
+    background-color: #616161;
+}

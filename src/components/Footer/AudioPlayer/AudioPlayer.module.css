@@ -99,25 +99,42 @@
 }
 
 /* current time for progress bar */
-.currentTime{
+.currentTime {
     position: absolute;
     top: 6px;
     left: 10px;
     z-index: 3;
 }
 
-.duration{
+.duration {
     position: absolute;
     top: 6px;
     right: 10px;
     z-index: 3;
 }
 
-.button{
+.buttonWrap {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 30px 20px 30px;
+}
+
+.button {
     background-color: #212121;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
-    height: 50px;
+    height: 40px;
     cursor: pointer;
     padding: 5px 10px 5px 10px;
+}
+
+.button:hover {
+    background-color: #424242;
+    transition: 0.5s
+}
+
+.button:active {
+    background-color: #616161;
 }

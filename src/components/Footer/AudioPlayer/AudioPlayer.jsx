@@ -3,9 +3,8 @@ import { useEffect, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import { calculateTime } from "../../../lib/helpers"
 import { Typography } from "@mui/material"
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import PauseIcon from '@mui/icons-material/Pause'
-import { grey } from "@mui/material/colors"
+import AudioPlayerButtons from "./ControlPanel/Buttons/Buttons"
+import ControlPanel from "./ControlPanel/ControlPanel"
 
 //www.w3schools.com html reference audio/video
 const AudioPlayer = () => {
@@ -80,9 +79,7 @@ const AudioPlayer = () => {
                 type="audio/mpeg" 
                 controls 
             />
-            <div className = { styles.button } onClick={togglePlayPause}>
-                {isPlaying ? <PauseIcon sx={{ color: grey[500] }}/> : <PlayArrowIcon sx={{ color: grey[500] }}/>}
-            </div>
+            <ControlPanel togglePlayPause = { togglePlayPause } isPlaying = { isPlaying }/>
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.currentTime }>
                     {calculateTime(currentTime)}
