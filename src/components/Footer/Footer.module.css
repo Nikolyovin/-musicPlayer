@@ -1,4 +1,6 @@
 .footer {
     background-color: #bdbdbd;
     position: relative;
+    display: grid;
+    grid-template: 1fr/ 1fr minmax(auto, 1024px) 1fr;
 }

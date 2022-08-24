@@ -1,7 +1,9 @@
 .playerWrap {
     width: 100%;
+    transition: 0.5s;
 }
 
 .playerWrapNone {
     display: none;
+    transition: 0.5s;
 }

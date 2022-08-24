@@ -102,14 +102,14 @@
 .currentTime {
     position: absolute;
     top: 6px;
-    left: 10px;
+    left: 450px;
     z-index: 3;
 }
 
 .duration {
     position: absolute;
     top: 6px;
-    right: 10px;
+    right: 450px;
     z-index: 3;
 }
 
@@ -137,4 +137,8 @@
 
 .button:active {
     background-color: #616161;
+}
+
+.audioPlayer {
+    grid-column: 2;
 }

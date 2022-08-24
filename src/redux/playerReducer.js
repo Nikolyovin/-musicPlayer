@@ -15,7 +15,7 @@ const initialState = {
 const playerReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_SONGS:
-            return { ...state.state, music: requestMusic }
+            return { ...state, music: requestMusic }
 
         case ADD_LIKE:
             return {

@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  /* margin: 0 auto; */
+  /* display: grid;
+  grid-template-columns: 1fr 1024px 1fr;
+  width: 100%; */
 }
 
 .App-logo {
@@ -36,3 +40,7 @@
     transform: rotate(360deg);
   }
 }
+
+/* .appWrap{
+  grid-column: 2;
+} */

@@ -5,9 +5,7 @@ const Footer = () => {
 
     return (
         <div className={styles.footer}>
-            {/* <ProgressBar track={track}/> */}
             <AudioPlayer/>
-            
         </div>
     )
 }

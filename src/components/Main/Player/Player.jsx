@@ -11,7 +11,7 @@ const Player = () => {
         dispatch(setSongs())
     }, [])
 
-    const isOpenList = useSelector(state => state.player)
+    const isOpenList = useSelector(state => state.player.isOpenList)
     console.log('isOpenList:', isOpenList)
     const songs = useSelector(state => state.player.music) 
     console.log('songs:', songs)
