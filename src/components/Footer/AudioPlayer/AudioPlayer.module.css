@@ -102,14 +102,14 @@
 .currentTime {
     position: absolute;
     top: 6px;
-    left: 450px;
+    left: 10px;
     z-index: 3;
 }
 
 .duration {
     position: absolute;
     top: 6px;
-    right: 450px;
+    right: 10px;
     z-index: 3;
 }
 

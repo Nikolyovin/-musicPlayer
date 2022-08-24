@@ -1,6 +1,12 @@
 .playerWrap {
+    padding: 25px 0 25px 0;
     width: 100%;
     transition: 0.5s;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: dimgrey;
 }
 
 .playerWrapNone {

@@ -4,22 +4,13 @@ import styles from "./Songs.module.css"
 import { addLike } from "../../../../redux/playerReducer"
 
 const Songs = ({ songs }) => {  
-    
-    
-    return <> 
-        { songs.map(item => <Song 
-            // id = { item.id } 
-            key = { item.id } 
-            // name = { item.name } 
-            // band = { item.band } 
-            // duration = { item.duration }
-            // cover = { item.cover }
-            // isLike = { item.isLike }
-            // track = {item.track}
-            currentTrack = { item }
-            // props = {...item}
-        />)}
-    </>
+    return (
+        <> 
+            { songs.map(item => 
+                <Song  key = { item.id } currentTrack = { item }/>
+            )}
+        </>
+    )
     
 }
 export default Songs

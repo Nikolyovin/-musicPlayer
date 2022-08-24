@@ -12,9 +12,8 @@ const Player = () => {
     }, [])
 
     const isOpenList = useSelector(state => state.player.isOpenList)
-    console.log('isOpenList:', isOpenList)
     const songs = useSelector(state => state.player.music) 
-    console.log('songs:', songs)
+    
     {
         if (songs) return (
             <div className =  { isOpenList ? styles.playerWrap: styles.playerWrapNone }>

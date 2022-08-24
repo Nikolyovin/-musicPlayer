@@ -9,6 +9,7 @@ import { isOpenList } from "../../../../redux/playerReducer"
 
 const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack }) => {
     const dispatch = useDispatch()
+    const styleColor = 'styleColor'
     
     const toggelePlaylist = () => {
         dispatch(isOpenList())
@@ -20,7 +21,7 @@ const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack }) => {
                 <Buttons togglePlayPause = { togglePlayPause } isPlaying = { isPlaying }/>
                 { 
                     currentTrack
-                    ? <MusicCard currentTrack = { currentTrack }/>
+                    ? <MusicCard styleColor = {styleColor} currentTrack = { currentTrack } />
                     : <></>
                 }
         </div>

@@ -14,10 +14,7 @@ const Song = ({ currentTrack }) => {
     const audioRef = useRef()
     const [duration, setDuration] = useState(0)
     const { track, isLike, id } = currentTrack
-    // console.log("props:", props) 
-    // useEffect(() => {
-    //     setDuration(audioRef.current.duration)
-    // }, [])
+    
     const onLoadedMetadata = () => {
         setDuration(audioRef.current.duration) //делаем максимальное значение прогрессбара равное продолжительности трека
     }
@@ -29,7 +26,7 @@ const Song = ({ currentTrack }) => {
                 src = { track } 
                 ref = { audioRef } 
             />           
-            <div className = { styles.songWrap } >
+            <div className = { styles.songWrap } id = {styles.sondWrapId} >
                     <MusicCard  
                         currentTrack = { currentTrack }
                     />
