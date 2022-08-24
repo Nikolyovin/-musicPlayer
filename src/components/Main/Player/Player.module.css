@@ -1,3 +1,7 @@
 .playerWrap {
     width: 100%;
 }
+
+.playerWrapNone {
+    display: none;
+}

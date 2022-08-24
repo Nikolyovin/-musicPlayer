@@ -8,6 +8,8 @@
 .songInfo {
     display: flex;
     justify-content: flex-start;
+    background-color: #212121;
+    height: 50px;
 }
 
 .cover {

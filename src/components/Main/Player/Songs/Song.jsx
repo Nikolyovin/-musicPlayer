@@ -28,14 +28,9 @@ const Song = ({ currentTrack }) => {
                 onLoadedMetadata = { onLoadedMetadata } 
                 src = { track } 
                 ref = { audioRef } 
-                autoplay 
             />           
             <div className = { styles.songWrap } >
-                    <MusicCard 
-                        // name = { name } 
-                        // band = { band } 
-                        // cover = { cover }
-                        // id = { id }  
+                    <MusicCard  
                         currentTrack = { currentTrack }
                     />
                 <div className = { styles.songOtherInfo } >

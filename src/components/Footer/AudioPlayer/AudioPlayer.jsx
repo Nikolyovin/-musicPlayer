@@ -71,7 +71,6 @@ const AudioPlayer = () => {
             />
             <audio 
                 preload="auto" 
-                autoplay 
                 onLoadedMetadata={onLoadedMetadata} 
                 className={styles.audio} 
                 ref={audioPlayer} 
@@ -79,7 +78,11 @@ const AudioPlayer = () => {
                 type="audio/mpeg" 
                 controls 
             />
-            <ControlPanel togglePlayPause = { togglePlayPause } isPlaying = { isPlaying }/>
+            <ControlPanel 
+                togglePlayPause = { togglePlayPause } 
+                isPlaying = { isPlaying }
+                currentTrack = { currentTrack }
+            />
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.currentTime }>
                     {calculateTime(currentTime)}

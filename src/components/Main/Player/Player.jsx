@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setSongs } from "../../../redux/playerReducer"
 import styles from "./Player.module.css"
@@ -11,14 +11,17 @@ const Player = () => {
         dispatch(setSongs())
     }, [])
 
-    const songs = useSelector((state) => state.player.music) 
-    console.log('songs', songs)
+    const isOpenList = useSelector(state => state.player)
+    console.log('isOpenList:', isOpenList)
+    const songs = useSelector(state => state.player.music) 
+    console.log('songs:', songs)
     {
         if (songs) return (
-            <div className = { styles.playerWrap}>
+            <div className =  { isOpenList ? styles.playerWrap: styles.playerWrapNone }>
                 <Songs songs = {songs} />
             </div>
-    )}
+        )
+    }
 }
 
 export default Player
