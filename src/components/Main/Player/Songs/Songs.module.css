@@ -17,11 +17,25 @@
     height: 50px;
 }
 
+.MusicCardWrap {
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: #212121; */
+    height: 50px;
+}
+
+.MusicCardWrapFooter {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #212121;
+    height: 50px;
+}
+
 .cover {
     /* border: 2px solid black; */
     width: 50px;
     object-fit: cover;
-    padding: 3px;
+    padding: 5px;
 }
 
 .text {

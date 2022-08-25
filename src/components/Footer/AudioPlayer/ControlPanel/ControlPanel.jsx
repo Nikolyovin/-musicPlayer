@@ -5,26 +5,31 @@ import ListIcon from '@mui/icons-material/List'
 import { grey } from "@mui/material/colors"
 import stylesButton from "./Buttons/Buttons.module.css"
 import { useDispatch } from "react-redux"
-import { isOpenList } from "../../../../redux/playerReducer"
+import { isOpenList, nextTrack } from "../../../../redux/playerReducer"
 
 const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack }) => {
     const dispatch = useDispatch()
     const styleColor = 'styleColor'
+    const currentTrackId = currentTrack?.id
     
     const toggelePlaylist = () => {
         dispatch(isOpenList())
     }
 
+    const playNextTrack = () => {
+        dispatch(nextTrack(currentTrackId))
+    }
+    console.log('currentTrack:', currentTrack)
     return (
         <div className = { styles.controlPanel}>
             <div className = { styles.controlPanelLeft}>
-                <Buttons togglePlayPause = { togglePlayPause } isPlaying = { isPlaying }/>
+                <Buttons togglePlayPause = { togglePlayPause } isPlaying = { isPlaying } playNextTrack = { playNextTrack }/>
                 { 
                     currentTrack
-                    ? <MusicCard styleColor = {styleColor} currentTrack = { currentTrack } />
+                    ? <MusicCard styleColor = { styleColor } currentTrack = { currentTrack } />
                     : <></>
                 }
-        </div>
+            </div>
             <div onClick = { toggelePlaylist } className = { stylesButton.button } >
                 <ListIcon fontSize="large" sx={{ color: grey[500] }}/>
             </div>

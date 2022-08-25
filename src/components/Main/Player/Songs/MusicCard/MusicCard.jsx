@@ -6,12 +6,11 @@ import styles from "../Songs.module.css"
 const MusicCard = ({ currentTrack, ...props }) => {
     const dispatch = useDispatch()
     const { cover, name, id, band } = currentTrack
-    console.log('props:',props)
     
     return (
+        
         <div 
-            className = { styles.songInfo } 
-            
+            className = { props?.styleColor ? styles.MusicCardWrapFooter : styles.MusicCardWrap } 
             onClick = { () => dispatch(playtrack(id)) }
         >
             <img src = { cover } className = { styles.cover}/>

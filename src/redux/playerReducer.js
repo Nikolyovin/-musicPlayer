@@ -4,6 +4,7 @@ const SET_SONGS = "SET_SONGS"
 const ADD_LIKE = "ADD_LIKE"
 const PLAY_TRACK = "PLAY_TRACK"
 const IS_OPEN_LIST = "IS_OPEN_LIST"
+const NEXT_TRACK = "NEXT_TRACK"
 
 const requestMusic = music.music
 const initialState = {
@@ -19,20 +20,25 @@ const playerReducer = (state = initialState, action) => {
 
         case ADD_LIKE:
             return {
-                ...state, music: state.music.map(song => {
-                    if (song.id === action.songId) return { ...song, isLike: !song.isLike }
-                    return song
+                ...state, music: state.music.map(track => {
+                    if (track.id === action.trackId) return { ...track, isLike: !track.isLike }
+                    return track
                 })
             }
 
-        case PLAY_TRACK:
-            const activeTrack = state.music.find(song => song.id === action.songId)
+        case PLAY_TRACK: {
+            const activeTrack = state.music.find(track => track.id === action.trackId)
             return { ...state, activeTrack }
+        }
             
-
         case IS_OPEN_LIST:
-            console.log(state)
             return { ...state, isOpenList: !state.isOpenList }  
+
+        case NEXT_TRACK: {
+            console.log('action.trackId:', +action.trackId+1)
+            const activeTrack = state.music.find(track => track.id === String(+action.trackId+1))
+            return { ...state, activeTrack }
+        }
 
         default:
             return { state }
@@ -40,8 +46,9 @@ const playerReducer = (state = initialState, action) => {
 }
 
 export const setSongs = () => ({ type: SET_SONGS })
-export const addLike = (songId) => ({ type: ADD_LIKE, songId })
-export const playtrack = (songId) => ({ type: PLAY_TRACK, songId })
+export const addLike = (trackId) => ({ type: ADD_LIKE, trackId })
+export const playtrack = (trackId) => ({ type: PLAY_TRACK, trackId })
 export const isOpenList = () => ({ type: IS_OPEN_LIST })
+export const nextTrack = (trackId) => ({ type: NEXT_TRACK, trackId })
 
 export default playerReducer
