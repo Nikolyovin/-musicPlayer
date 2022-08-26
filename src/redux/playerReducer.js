@@ -35,8 +35,13 @@ const playerReducer = (state = initialState, action) => {
             return { ...state, isOpenList: !state.isOpenList }  
 
         case NEXT_TRACK: {
-            console.log('action.trackId:', +action.trackId+1)
-            const activeTrack = state.music.find(track => track.id === String(+action.trackId+1))
+            const lastTrack = { ...state.music.reverse()[0] }
+            const lastTrackId = String(15)
+            const activeTrack = action.trackId === lastTrackId 
+            ? state.music.find(track => track.id === String(1)) 
+            : state.music.find(track => track.id === String(+action.trackId + 1))   
+            console.log('lastTrack:', lastTrack)
+            console.log('action.trackId:', action.trackId)
             return { ...state, activeTrack }
         }
 

@@ -29,8 +29,6 @@ const ProgressBar = ({track}) => {
     return `${minute}:${secondLeft < 10 ? `0${secondLeft}` : secondLeft}`;
   }
 
-  console.log('track7777:', track)
-
   return (
     <ThemeProvider theme={theme}>
       {/* <LinearProgress variant="determinate" color='secondary' style={{ height: 15 }} value = '50'/> */}

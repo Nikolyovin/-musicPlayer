@@ -5,13 +5,13 @@ import { grey } from "@mui/material/colors"
 import SkipNextIcon from '@mui/icons-material/SkipNext'
 
 const Buttons = ({ togglePlayPause, isPlaying, playNextTrack, currentTrack }) => {
-   console.log('currentTrack:', currentTrack)
     return (
         <div className = { styles.buttonWrap }>
             <button 
                 className = { currentTrack ? styles.button : styles.buttonDisabled } 
                 onClick = { togglePlayPause } 
-                disabled = { !currentTrack }>
+                disabled = { !currentTrack }
+            >
                 { 
                     isPlaying 
                     ? <PauseIcon  fontSize="large" sx={{ color: grey[ 500 ] }}/>      
