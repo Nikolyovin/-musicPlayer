@@ -82,6 +82,8 @@ const AudioPlayer = () => {
                 togglePlayPause = { togglePlayPause } 
                 isPlaying = { isPlaying }
                 currentTrack = { currentTrack }
+                audioPlayer = { audioPlayer }
+                setIsPlaying = { setIsPlaying }
             />
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.currentTime }>

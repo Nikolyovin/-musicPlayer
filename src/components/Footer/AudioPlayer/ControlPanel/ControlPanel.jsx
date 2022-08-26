@@ -7,7 +7,7 @@ import stylesButton from "./Buttons/Buttons.module.css"
 import { useDispatch } from "react-redux"
 import { isOpenList, nextTrack } from "../../../../redux/playerReducer"
 
-const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack }) => {
+const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack, setIsPlaying }) => {
     const dispatch = useDispatch()
     const styleColor = 'styleColor'
     const currentTrackId = currentTrack?.id
@@ -17,13 +17,20 @@ const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack }) => {
     }
 
     const playNextTrack = () => {
+        setIsPlaying(false)
         dispatch(nextTrack(currentTrackId))
+        
     }
-    console.log('currentTrack:', currentTrack)
+    
     return (
         <div className = { styles.controlPanel}>
             <div className = { styles.controlPanelLeft}>
-                <Buttons togglePlayPause = { togglePlayPause } isPlaying = { isPlaying } playNextTrack = { playNextTrack }/>
+                <Buttons 
+                    togglePlayPause = { togglePlayPause } 
+                    isPlaying = { isPlaying } 
+                    playNextTrack = { playNextTrack }
+                    currentTrack = { currentTrack }
+                />
                 { 
                     currentTrack
                     ? <MusicCard styleColor = { styleColor } currentTrack = { currentTrack } />
