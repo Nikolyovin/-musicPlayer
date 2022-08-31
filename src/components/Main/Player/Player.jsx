@@ -16,8 +16,8 @@ const Player = () => {
     
     {
         if (songs) return (
-            <div className =  { isOpenList ? styles.playerWrap: styles.playerWrapNone }>
-                <Songs songs = {songs} />
+            <div className =  { isOpenList ? styles.playerWrap : styles.playerWrapNone }>
+                <Songs songs = { songs } />
             </div>        
         )
     }

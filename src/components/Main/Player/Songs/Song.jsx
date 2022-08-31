@@ -12,7 +12,7 @@ import MusicCard from "./MusicCard/MusicCard"
 const Song = ({ currentTrack }) => {
     const dispatch = useDispatch()
     const audioRef = useRef()
-    const [duration, setDuration] = useState(0)
+    const [ duration, setDuration ] = useState(0)
     const { track, isLike, id } = currentTrack
     
     const onLoadedMetadata = () => {
@@ -33,8 +33,8 @@ const Song = ({ currentTrack }) => {
                 <div className = { styles.songOtherInfo } >
                     { 
                         isLike
-                        ? <FavoriteIcon sx={{ color: grey[500] }} onClick = { () => dispatch(addLike(id)) }/>
-                        : <FavoriteBorderIcon sx={{ color: grey[500] }} onClick = { () => dispatch(addLike(id)) }/>
+                        ? <FavoriteIcon sx={{ color: grey[ 500 ] }} onClick = { () => dispatch(addLike(id)) }/>
+                        : <FavoriteBorderIcon sx={{ color: grey[ 500 ] }} onClick = { () => dispatch(addLike(id)) }/>
                     }
                     <Typography variant="body2" color="#9e9e9e" component="div">
                         { calculateTime(duration) }

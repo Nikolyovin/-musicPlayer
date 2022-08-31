@@ -87,12 +87,12 @@ const AudioPlayer = () => {
             />
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.currentTime }>
-                    {calculateTime(currentTime)}
+                    { calculateTime(currentTime) }
                 </div>
             </Typography>
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.duration }>
-                    {(duration && !isNaN(duration)) && calculateTime(duration)} {/* убираем ошибку nan nan когда пытается отобразить, до того как загружается */}
+                    { (duration && !isNaN(duration)) && calculateTime(duration) } {/* убираем ошибку nan nan когда пытается отобразить, до того как загружается */}
                 </div> 
             </Typography>
         </div>
