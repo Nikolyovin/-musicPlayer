@@ -2,10 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-<<<<<<< Updated upstream
-=======
   "homepage": "https://nikolyovin.github.io/MusicPlayer",
->>>>>>> Stashed changes
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
