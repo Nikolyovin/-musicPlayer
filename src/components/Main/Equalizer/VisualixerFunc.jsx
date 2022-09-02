@@ -8,38 +8,15 @@ const VisualixerFunc = () => {
   const  buttonRef = useRef(null)
   const audioRef = useRef(null)
 
-    const currentTrack = useSelector((state) => state.player.activeTrack) 
-    // const url = currentTrack?.track
-    const url = 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/MusOpen/Skidmore_College_Orchestra/Mussorgskys_Pictures_at_an_Exhibition/Skidmore_College_Orchestra_-_01_-_Promenade_Allegro_giusto_nel_modo_russico_senza_allegrezza_ma.mp3'
-
+  const currentTrack = useSelector((state) => state.player.activeTrack) 
+   
   const audioVisualizerLogic = () => {
     
     const context = new (window.AudioContext || window.webkitAudioContext)()
-      // const context = new AudioContext()
-      // source = context.createBufferSource();
-    
-   
-    // fetch("https://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3")
-    //   .then((response) => {
-    //     console.log('response:', response)
-    //     response.arrayBuffer()
-    //   })
-      
-    //   .then((response) => {
-    //     context.decodeAudioData(response, (buffer) => {
-    //       source.buffer = buffer;
-    //       source.connect(context.destination);
-    //       // auto play
-    //       source.start(0);
-    //     });
-    //   });
 
-        
-    const 
-      // audio = new Audio(url),
-      audio = audioRef.current,
-      canvas = canvasRef.current,
-      muteButton = buttonRef.current;
+    const  audio = audioRef.current
+    const  canvas = canvasRef.current
+    const  muteButton = buttonRef.current
       console.log('audio:', audio)
 
     //mute or play on click
@@ -48,7 +25,8 @@ const VisualixerFunc = () => {
       audio.load()
       audio.play()
       console.log('context:', context)
-    };
+    }
+
     muteButton.onclick = () => mutePlay();
     const analyser = context.createAnalyser();
     const ctx = canvas.getContext("2d");
@@ -61,22 +39,7 @@ const VisualixerFunc = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-
-    //config audio analyzer
-    
-    // audio.connect(analyser);
-    // analyser.connect(context.destination);
-    // analyser.fftSize = 256;
-
-///////
-  
-  
- 
-
-      
-//////
-
-
+    analyser.fftSize = 256;
 
     const bufferLength = analyser.frequencyBinCount,
       dataArray = new Uint8Array(bufferLength),
@@ -137,10 +100,8 @@ const VisualixerFunc = () => {
       
       <button ref={buttonRef}> click </button>
       <audio  
-      
         className='audio'
         ref={audioRef} 
-        
         controls 
       >
         <source 
@@ -152,9 +113,9 @@ const VisualixerFunc = () => {
 
       <span className="hint">(Click page to start/stop)</span>
       <main className="main">
-        {/* <button className="contextButton" ref={buttonRef}> */}
+        <button className="contextButton">
           <canvas ref={canvasRef} className="canvas"></canvas>
-        {/* </button> */}
+        </button>
       </main>
     </div>
   );

@@ -1,6 +1,6 @@
-import EqualizerOld from "./Equalizer/Equalizer"
-import EqualizerClass from "./Equalizer/EqualizerClass"
-import Vis from "./Equalizer/Vis"
+// import EqualizerOld from "./Equalizer/Equalizer"
+// import EqualizerClass from "./Equalizer/EqualizerClass"
+// import Vis from "./Equalizer/Vis"
 import VisualixerFunc from "./Equalizer/VisualixerFunc"
 
 // import EqualizerClassMicro from "./Equalizer/EqualizerClassMicro"
