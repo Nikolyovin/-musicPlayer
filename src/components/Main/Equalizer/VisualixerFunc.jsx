@@ -1,53 +1,83 @@
-// Credits to Nick Jones's original vanilla source: https://codepen.io/nfj525/pen/rVBaab
-// import React from "https://cdn.skypack.dev/react@17.0.1";
-// import ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
-// import { useEffect, useRef } from "https://cdn.skypack.dev/react";
+
 import '../../../App.css'
 import { useEffect, useRef } from "react";
+import { useSelector } from "react-redux"
 
 const VisualixerFunc = () => {
-  const 
-    canvasRef = useRef(null),
-    buttonRef = useRef(null);
+  const canvasRef = useRef(null)
+  const  buttonRef = useRef(null)
+  const audioRef = useRef(null)
+
+    const currentTrack = useSelector((state) => state.player.activeTrack) 
+    // const url = currentTrack?.track
+    const url = 'https://files.freemusicarchive.org/storage-freemusicarchive-org/music/MusOpen/Skidmore_College_Orchestra/Mussorgskys_Pictures_at_an_Exhibition/Skidmore_College_Orchestra_-_01_-_Promenade_Allegro_giusto_nel_modo_russico_senza_allegrezza_ma.mp3'
 
   const audioVisualizerLogic = () => {
-    const 
-      context = new (window.AudioContext || window.webkitAudioContext)(),
-      source = context.createBufferSource();
     
-    //fetch remote audio source
-    fetch("https://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3")
-      .then((response) => response.arrayBuffer())
-      .then((response) => {
-        context.decodeAudioData(response, (buffer) => {
-          source.buffer = buffer;
-          source.connect(context.destination);
-          // auto play
-          source.start(0);
-        });
-      });
+    const context = new (window.AudioContext || window.webkitAudioContext)()
+      // const context = new AudioContext()
+      // source = context.createBufferSource();
+    
+   
+    // fetch("https://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3")
+    //   .then((response) => {
+    //     console.log('response:', response)
+    //     response.arrayBuffer()
+    //   })
+      
+    //   .then((response) => {
+    //     context.decodeAudioData(response, (buffer) => {
+    //       source.buffer = buffer;
+    //       source.connect(context.destination);
+    //       // auto play
+    //       source.start(0);
+    //     });
+    //   });
 
+        
     const 
-      audio = new Audio(source),
+      // audio = new Audio(url),
+      audio = audioRef.current,
       canvas = canvasRef.current,
       muteButton = buttonRef.current;
+      console.log('audio:', audio)
 
     //mute or play on click
     const mutePlay = () => {
       context.state === "running" ? context.suspend() : context.resume();
+      audio.load()
+      audio.play()
+      console.log('context:', context)
     };
     muteButton.onclick = () => mutePlay();
-
+    const analyser = context.createAnalyser();
+    const ctx = canvas.getContext("2d");
+    audio.crossOrigin = "anonymous";
+    let audioSrc = context.createMediaElementSource(audio);
+    audioSrc.connect(analyser);
+    audioSrc.connect(context.destination);
+    analyser.connect(context.destination);
     //config canvas
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    const ctx = canvas.getContext("2d");
+    
 
     //config audio analyzer
-    const analyser = context.createAnalyser();
-    source.connect(analyser);
-    analyser.connect(context.destination);
-    analyser.fftSize = 256;
+    
+    // audio.connect(analyser);
+    // analyser.connect(context.destination);
+    // analyser.fftSize = 256;
+
+///////
+  
+  
+ 
+
+      
+//////
+
+
+
     const bufferLength = analyser.frequencyBinCount,
       dataArray = new Uint8Array(bufferLength),
       WIDTH = canvas.width,
@@ -58,6 +88,7 @@ const VisualixerFunc = () => {
 
     //core logic for the visualizer
     const timeouts = [];
+
     const renderFrame = () => {
       ctx.fillStyle = "rgba(0,0,0,0)";
       requestAnimationFrame(renderFrame);
@@ -92,25 +123,43 @@ const VisualixerFunc = () => {
     renderFrame();
   };
 
+  const doResume =() => {
+    context.resume().then(console.log("resume started"));
+  }
+
   //connect audio visualizer to DOM and execute logic
   useEffect(() => {
     audioVisualizerLogic();
   }, []);
-
+  
   return (
     <div className="VisualixerFunc">
-      <header className="VisualixerFunc-header">
-        <h1>React Audio Visualizer</h1>
-      </header>
+      
+      <button ref={buttonRef}> click </button>
+      <audio  
+      
+        className='audio'
+        ref={audioRef} 
+        
+        controls 
+      >
+        <source 
+          src='https://files.freemusicarchive.org/storage-freemusicarchive-org/music/MusOpen/Skidmore_College_Orchestra/Mussorgskys_Pictures_at_an_Exhibition/Skidmore_College_Orchestra_-_01_-_Promenade_Allegro_giusto_nel_modo_russico_senza_allegrezza_ma.mp3'
+        >
+
+        </source>
+      </audio>
+
       <span className="hint">(Click page to start/stop)</span>
       <main className="main">
-        <button className="contextButton" ref={buttonRef}>
+        {/* <button className="contextButton" ref={buttonRef}> */}
           <canvas ref={canvasRef} className="canvas"></canvas>
-        </button>
+        {/* </button> */}
       </main>
     </div>
   );
 }
+
 
 // ReactDOM.render(<VisualixerFunc />, document.getElementById("root"));
 

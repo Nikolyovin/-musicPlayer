@@ -36,6 +36,11 @@ class EqualizerClass extends Component {
           );
         });
       });
+
+      // function isPlayPause() {
+      //   context.state === "running" ? context.suspend() : context.resume();
+      // console.log('context:', context)
+      // }
   
       let analyser = context.createAnalyser();
       let canvas = this.refs.analyzerCanvas;
@@ -74,8 +79,8 @@ class EqualizerClass extends Component {
           <div id="mp3_player">
             <div id="audio_box">
               <audio ref="audio" autoPlay={false} controls={true} src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/MusOpen/Skidmore_College_Orchestra/Mussorgskys_Pictures_at_an_Exhibition/Skidmore_College_Orchestra_-_01_-_Promenade_Allegro_giusto_nel_modo_russico_senza_allegrezza_ma.mp3" />
-              <button id="resume">resume</button>
-              <button id="suspend">suspend</button>
+              <button onClick={this.isPlayPause} id="resume">resume</button>
+              {/* <button id="suspend">suspend</button> */}
             </div>
             <canvas ref="analyzerCanvas" id="analyzer" />
           </div>

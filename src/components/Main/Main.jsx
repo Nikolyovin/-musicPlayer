@@ -1,5 +1,6 @@
-// import Equalizer from "./Equalizer/Equalizer"
-// import EqualizerClass from "./Equalizer/EqualizerClass"
+import EqualizerOld from "./Equalizer/Equalizer"
+import EqualizerClass from "./Equalizer/EqualizerClass"
+import Vis from "./Equalizer/Vis"
 import VisualixerFunc from "./Equalizer/VisualixerFunc"
 
 // import EqualizerClassMicro from "./Equalizer/EqualizerClassMicro"
@@ -13,11 +14,12 @@ const Main = () => {
     return (
         <div className = { styles.mainWrap}>
             {/* <EqualizerClassMicro/> */}
-            {/* <EqualizerClass/> */}
+            {/* <EqualizerClass/> */} 
             <VisualixerFunc/>
-            {/* <Equalizer/> */}
+            {/* <EqualizerOld/> */}
             {/* <VisualizerHabr/> */}
             {/* <Visualizer/> */}
+            {/* <Vis/> */}
             <Player/>
         </div>
     )

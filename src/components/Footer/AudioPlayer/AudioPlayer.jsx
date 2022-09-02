@@ -1,10 +1,11 @@
 import styles from "./AudioPlayer.module.css"
 import { useEffect, useRef, useState } from "react"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { calculateTime } from "../../../lib/helpers"
 import { Typography } from "@mui/material"
 import AudioPlayerButtons from "./ControlPanel/Buttons/Buttons"
 import ControlPanel from "./ControlPanel/ControlPanel"
+import { togglePlayPauseAC } from "../../../redux/playerReducer"
 
 //www.w3schools.com html reference audio/video
 const AudioPlayer = () => {
@@ -18,6 +19,8 @@ const AudioPlayer = () => {
     const audioPlayer = useRef();   // reference our audio component
     const progressBar = useRef();   // reference our progress bar
     const animationRef = useRef();  // reference the animation
+
+    const dispatch = useDispatch()
 
     useEffect(() => {    
         setIsPlaying(false)
@@ -35,6 +38,7 @@ const AudioPlayer = () => {
     const togglePlayPause = () =>{
         const prevValue = isPlaying
         setIsPlaying(!prevValue)
+        dispatch(togglePlayPauseAC())
         if (!prevValue) {
             audioPlayer.current.play()
             animationRef.current = requestAnimationFrame(whilePlaying)                   //нужно чтобы прогресс бар двигался
