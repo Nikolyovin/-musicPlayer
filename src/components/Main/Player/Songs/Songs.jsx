@@ -3,11 +3,11 @@ import { useDispatch } from "react-redux"
 import styles from "./Songs.module.css"
 import { addLike } from "../../../../redux/playerReducer"
 
-const Songs = ({ songs }) => {  
+const Songs = ({ songs, setAudioRef }) => {  
     return (
         <> 
             { songs.map(item => 
-                <Song  key = { item.id } currentTrack = { item }/>
+                <Song  key = { item.id } currentTrack = { item } setAudioRef = { setAudioRef }/>
             )}
         </>
     )

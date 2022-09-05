@@ -4,7 +4,7 @@ import { setSongs } from "../../../redux/playerReducer"
 import styles from "./Player.module.css"
 import Songs from "./Songs/Songs"
 
-const Player = () => {
+const Player = ({ setAudioRef }) => {
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Player = () => {
     {
         if (songs) return (
             <div className =  { isOpenList ? styles.playerWrap : styles.playerWrapNone }>
-                <Songs songs = { songs } />
+                <Songs songs = { songs } setAudioRef = { setAudioRef } />
             </div>        
         )
     }

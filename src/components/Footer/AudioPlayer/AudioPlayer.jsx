@@ -8,7 +8,7 @@ import ControlPanel from "./ControlPanel/ControlPanel"
 import { togglePlayPauseAC } from "../../../redux/playerReducer"
 
 //www.w3schools.com html reference audio/video
-const AudioPlayer = () => {
+const AudioPlayer = ({ context,  setAudioRef }) => {
     const [isPlaying, setIsPlaying] = useState(false)
     const [duration, setDuration] = useState(0)
     const [currentTime, setCurrentTime] = useState(0)
@@ -22,10 +22,13 @@ const AudioPlayer = () => {
 
     const dispatch = useDispatch()
 
+    // const context = new (window.AudioContext || window.webkitAudioContext)() // контекст для визуализатора завука
+
     useEffect(() => {    
         setIsPlaying(false)
         // audioPlayer.current?.pause()
         audioPlayer.current?.load()
+        setAudioRef(audioPlayer)
         // audioPlayer.current?.play()
     }, [currentTrack]);
 
@@ -36,13 +39,26 @@ const AudioPlayer = () => {
     }
 
     const togglePlayPause = () =>{
+        // console.log('context1:', context.state)
+        // context.state === "running" ? context.suspend() : context.resume()
+        // setContext(context)
+        // console.log('context2:', context.state)
         const prevValue = isPlaying
         setIsPlaying(!prevValue)
         dispatch(togglePlayPauseAC())
+        
         if (!prevValue) {
+            console.log('context1:', context.state)
+            context.resume()
+            // setContext(context)
+            console.log('context2:', context.state)
             audioPlayer.current.play()
             animationRef.current = requestAnimationFrame(whilePlaying)                   //нужно чтобы прогресс бар двигался
         } else {
+            console.log('context1:', context.state)
+            context.suspend()
+            // setContext(context)
+            console.log('context2:', context.state)
             audioPlayer.current.pause()
             cancelAnimationFrame(animationRef.current)                                  //нужно чтобы прогресс бар двигался
         }

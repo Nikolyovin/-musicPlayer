@@ -1,26 +1,24 @@
-// import EqualizerOld from "./Equalizer/Equalizer"
-// import EqualizerClass from "./Equalizer/EqualizerClass"
-// import Vis from "./Equalizer/Vis"
+import { useState } from "react"
 import VisualixerFunc from "./Equalizer/VisualixerFunc"
-
-// import EqualizerClassMicro from "./Equalizer/EqualizerClassMicro"
-//  import Visualizer from "./Equalizer/Visualizer"
-// import VisualizerHabr from "./Equalizer/VisualizerHabr"
-// import Visualizer from "./Equalizer/Visualizer"
 import styles from "./Main.module.css"
 import Player from "./Player/Player"
 
-const Main = () => {
+const Main = ({ setContext, audioRef }) => {
+    
+    
+    console.log('audioRefMain:', audioRef)
+
+
     return (
         <div className = { styles.mainWrap}>
             {/* <EqualizerClassMicro/> */}
             {/* <EqualizerClass/> */} 
-            <VisualixerFunc/>
+            <VisualixerFunc audioRef = { audioRef } setContext = { setContext }/>
             {/* <EqualizerOld/> */}
             {/* <VisualizerHabr/> */}
             {/* <Visualizer/> */}
             {/* <Vis/> */}
-            <Player/>
+            <Player />
         </div>
     )
 }

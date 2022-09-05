@@ -3,7 +3,7 @@ import playerReducer from "./playerReducer"
 
 const reducers = combineReducers({
     player: playerReducer,
-    visualizer: visualizerReducer
+    /* visualizer: visualizerReducer */
 })
 
 export const store = createStore(reducers)

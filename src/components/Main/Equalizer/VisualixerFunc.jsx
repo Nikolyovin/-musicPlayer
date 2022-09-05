@@ -1,33 +1,30 @@
 
 import '../../../App.css'
 import { useEffect, useRef } from "react";
-import { useSelector } from "react-redux"
 
-const VisualixerFunc = () => {
+const VisualixerFunc = ({ audioRef, setContext }) => {
   const canvasRef = useRef(null)
   const  buttonRef = useRef(null)
-  const audioRef = useRef(null)
-
-  const currentTrack = useSelector((state) => state.player.activeTrack) 
+  // const audioRef = useRef(null)
    
   const audioVisualizerLogic = () => {
     
     const context = new (window.AudioContext || window.webkitAudioContext)()
+    setContext(context)
 
     const  audio = audioRef.current
     const  canvas = canvasRef.current
     const  muteButton = buttonRef.current
-      console.log('audio:', audio)
 
-    //mute or play on click
-    const mutePlay = () => {
-      context.state === "running" ? context.suspend() : context.resume();
-      audio.load()
-      audio.play()
-      console.log('context:', context)
-    }
+    
+    // const mutePlay = () => {
+    //   context.state === "running" ? context.suspend() : context.resume();
+    //   audio.load()
+    //   audio.play()
+    //   console.log('context:', context.state)
+    // }
+    // muteButton.onclick = () => mutePlay();
 
-    muteButton.onclick = () => mutePlay();
     const analyser = context.createAnalyser();
     const ctx = canvas.getContext("2d");
     audio.crossOrigin = "anonymous";
@@ -86,20 +83,20 @@ const VisualixerFunc = () => {
     renderFrame();
   };
 
-  const doResume =() => {
-    context.resume().then(console.log("resume started"));
-  }
+  // const doResume =() => {
+  //   context.resume().then(console.log("resume started"));
+  // }
 
   //connect audio visualizer to DOM and execute logic
   useEffect(() => {
-    audioVisualizerLogic();
-  }, []);
+    if (audioRef) audioVisualizerLogic();
+  }, [audioRef]);
   
   return (
     <div className="VisualixerFunc">
       
       <button ref={buttonRef}> click </button>
-      <audio  
+      {/* <audio  
         className='audio'
         ref={audioRef} 
         controls 
@@ -109,7 +106,7 @@ const VisualixerFunc = () => {
         >
 
         </source>
-      </audio>
+      </audio> */}
 
       <span className="hint">(Click page to start/stop)</span>
       <main className="main">

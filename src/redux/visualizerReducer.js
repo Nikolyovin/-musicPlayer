@@ -2,7 +2,7 @@ const SET_SONGS = "SET_SONGS"
 
 
 const initialState = {
-    
+    audioRef: null
 }
 
 const visualizerReducer = (state = initialState, action) => {

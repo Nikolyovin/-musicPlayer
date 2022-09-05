@@ -9,9 +9,9 @@ import { useEffect, useRef, useState } from "react"
 import { calculateTime } from "../../../../lib/helpers"
 import MusicCard from "./MusicCard/MusicCard"
 
-const Song = ({ currentTrack }) => {
+const Song = ({ currentTrack, setAudioRef }) => {
     const dispatch = useDispatch()
-    const audioRef = useRef()
+    const audioRef = useRef(null)
     const [ duration, setDuration ] = useState(0)
     const { track, isLike, id } = currentTrack
     
@@ -29,6 +29,9 @@ const Song = ({ currentTrack }) => {
             <div className = { styles.songWrap } id = {styles.sondWrapId} >
                     <MusicCard  
                         currentTrack = { currentTrack }
+                        audioRef = { audioRef }
+                        setAudioRef = { setAudioRef }
+                        
                     />
                 <div className = { styles.songOtherInfo } >
                     { 
