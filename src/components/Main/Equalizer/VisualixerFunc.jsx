@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 const VisualixerFunc = ({ audioRef, setContext }) => {
   const canvasRef = useRef(null)
   const  buttonRef = useRef(null)
-  // const audioRef = useRef(null)
    
   const audioVisualizerLogic = () => {
     
@@ -15,15 +14,6 @@ const VisualixerFunc = ({ audioRef, setContext }) => {
     const  audio = audioRef.current
     const  canvas = canvasRef.current
     const  muteButton = buttonRef.current
-
-    
-    // const mutePlay = () => {
-    //   context.state === "running" ? context.suspend() : context.resume();
-    //   audio.load()
-    //   audio.play()
-    //   console.log('context:', context.state)
-    // }
-    // muteButton.onclick = () => mutePlay();
 
     const analyser = context.createAnalyser();
     const ctx = canvas.getContext("2d");
@@ -83,10 +73,6 @@ const VisualixerFunc = ({ audioRef, setContext }) => {
     renderFrame();
   };
 
-  // const doResume =() => {
-  //   context.resume().then(console.log("resume started"));
-  // }
-
   //connect audio visualizer to DOM and execute logic
   useEffect(() => {
     if (audioRef) audioVisualizerLogic();
@@ -94,25 +80,10 @@ const VisualixerFunc = ({ audioRef, setContext }) => {
   
   return (
     <div className="VisualixerFunc">
-      
-      <button ref={buttonRef}> click </button>
-      {/* <audio  
-        className='audio'
-        ref={audioRef} 
-        controls 
-      >
-        <source 
-          src='https://files.freemusicarchive.org/storage-freemusicarchive-org/music/MusOpen/Skidmore_College_Orchestra/Mussorgskys_Pictures_at_an_Exhibition/Skidmore_College_Orchestra_-_01_-_Promenade_Allegro_giusto_nel_modo_russico_senza_allegrezza_ma.mp3'
-        >
-
-        </source>
-      </audio> */}
-
-      <span className="hint">(Click page to start/stop)</span>
       <main className="main">
-        <button className="contextButton">
+        {/* <button className="contextButton"> */}
           <canvas ref={canvasRef} className="canvas"></canvas>
-        </button>
+        {/* </button> */}
       </main>
     </div>
   );

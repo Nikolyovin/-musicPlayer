@@ -1,9 +1,5 @@
 .App {
   text-align: center;
-  /* margin: 0 auto; */
-  /* display: grid;
-  grid-template-columns: 1fr 1024px 1fr;
-  width: 100%; */
 }
 
 .App-logo {
@@ -15,17 +11,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -41,65 +26,21 @@
   }
 }
 
-/* .appWrap{
-  grid-column: 2;
-} */
-
-.VisualixerFunc-header {
-  position: relative;
-  top: 100px;
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #282c34;
-  min-height: 64px;
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-
-.VisualixerFunc-header h1 {
-  margin: auto;
-  font-size: 32px;
-}
-
-.hint {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.contextButton {
-  background: transparent;
-  border: none;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .main {
   /* position: absolute;
   bottom: 0;
   left: 0; */
-  height: calc(100vh - 64px);
-  width: 100vw;
+  height: calc(100vh - 180px);
+  /* width: 100vw; */
   z-index: 10;
   /* overflow: hidden hidden; */
 }
 
 .canvas {
-   position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 130px;
   left: 0; 
-  height: 90%;
-  width: 100.4%;
+  height: 100%;
+  width: 100%;
 }
 
-/* .audio{
-  z-index: 1;
-  position: absolute;
-} */
-
-.buttonNew{
-  z-index: 1
-}
