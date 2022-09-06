@@ -13,7 +13,6 @@ const VisualixerFunc = ({ audioRef, setContext }) => {
 
     const  audio = audioRef.current
     const  canvas = canvasRef.current
-    const  muteButton = buttonRef.current
 
     const analyser = context.createAnalyser();
     const ctx = canvas.getContext("2d");
@@ -52,7 +51,7 @@ const VisualixerFunc = ({ audioRef, setContext }) => {
         let 
           r = barHeight + 22 * (i / bufferLength),
           g = 333 * (i / bufferLength),
-          b = 47;
+          b = 15547;
         ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
         ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
         x += barWidth + 1;
@@ -81,15 +80,10 @@ const VisualixerFunc = ({ audioRef, setContext }) => {
   return (
     <div className="VisualixerFunc">
       <main className="main">
-        {/* <button className="contextButton"> */}
           <canvas ref={canvasRef} className="canvas"></canvas>
-        {/* </button> */}
       </main>
     </div>
   );
 }
-
-
-// ReactDOM.render(<VisualixerFunc />, document.getElementById("root"));
 
 export default VisualixerFunc

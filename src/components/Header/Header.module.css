@@ -4,6 +4,9 @@
     background-color: #bdbdbd;
     height: 50px;
     justify-items: start;
+    position: sticky;
+    width: 100%;
+    z-index: 6;
     /* display: flex;
     align-items: center;
     justify-content: flex-start; */
