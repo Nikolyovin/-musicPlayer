@@ -1,12 +1,13 @@
-import Equalizer from "./Equalizer/Equalizer"
+import Visualizer from "./Visualizer/Visualizer"
 import styles from "./Main.module.css"
-import Player from "./Player/Player"
+import Playlist from "./Playlist/Playlist"
 
-const Main = () => {
+const Main = ({ setContext, audioRef }) => {
+
     return (
         <div className = { styles.mainWrap}>
-            <Equalizer/>
-            <Player/>
+            <Visualizer audioRef = { audioRef } setContext = { setContext }/>
+            <Playlist />
         </div>
     )
 }

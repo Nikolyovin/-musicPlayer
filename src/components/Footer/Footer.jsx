@@ -1,11 +1,11 @@
 import styles from "./Footer.module.css"
 import AudioPlayer from "./AudioPlayer/AudioPlayer";
 
-const Footer = () => {
+const Footer = ({ context,  setAudioRef }) => {
 
     return (
-        <div className={styles.footer}>
-            <AudioPlayer/>
+        <div className = { styles.footer }>
+            <AudioPlayer context = { context } setAudioRef = { setAudioRef }/>
         </div>
     )
 }

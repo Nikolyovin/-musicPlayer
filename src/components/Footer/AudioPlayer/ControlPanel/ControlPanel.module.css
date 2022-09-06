@@ -2,11 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px 30px 100px;
+    padding: 25px 100px 25px 100px;
 }
 
 .controlPanelLeft {
     display: flex;
-    /* padding: 30px; */
     padding: 0 30px 0 0;
 }

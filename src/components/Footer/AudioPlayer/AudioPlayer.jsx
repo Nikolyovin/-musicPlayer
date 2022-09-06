@@ -3,26 +3,27 @@ import { useEffect, useRef, useState } from "react"
 import { useSelector } from "react-redux"
 import { calculateTime } from "../../../lib/helpers"
 import { Typography } from "@mui/material"
-import AudioPlayerButtons from "./ControlPanel/Buttons/Buttons"
 import ControlPanel from "./ControlPanel/ControlPanel"
+import { togglePlayPauseAC } from "../../../redux/playerReducer"
 
 //www.w3schools.com html reference audio/video
-const AudioPlayer = () => {
-    const [isPlaying, setIsPlaying] = useState(false)
-    const [duration, setDuration] = useState(0)
-    const [currentTime, setCurrentTime] = useState(0)
+const AudioPlayer = ({ context,  setAudioRef }) => {
+    const [ isPlaying, setIsPlaying ] = useState(false)
+    const [ duration, setDuration ] = useState(0)
+    const [ currentTime, setCurrentTime ] = useState(0)
 
     const currentTrack = useSelector((state) => state.player.activeTrack) 
     const source = currentTrack?.track
 
-    const audioPlayer = useRef();   // reference our audio component
-    const progressBar = useRef();   // reference our progress bar
-    const animationRef = useRef();  // reference the animation
+    const audioPlayer = useRef()   // reference our audio component
+    const progressBar = useRef()   // reference our progress bar
+    const animationRef = useRef()  // reference the animation
 
     useEffect(() => {    
         setIsPlaying(false)
         // audioPlayer.current?.pause()
         audioPlayer.current?.load()
+        setAudioRef(audioPlayer)
         // audioPlayer.current?.play()
     }, [currentTrack]);
 
@@ -32,13 +33,16 @@ const AudioPlayer = () => {
         progressBar.current.max = seconds;              //делаем максимальное значение прогрессбара равное продолжительности трека
     }
 
-    const togglePlayPause = () =>{
+    const togglePlayPause = () => {
         const prevValue = isPlaying
         setIsPlaying(!prevValue)
+        
         if (!prevValue) {
+            context.resume()
             audioPlayer.current.play()
             animationRef.current = requestAnimationFrame(whilePlaying)                   //нужно чтобы прогресс бар двигался
         } else {
+            context.suspend()
             audioPlayer.current.pause()
             cancelAnimationFrame(animationRef.current)                                  //нужно чтобы прогресс бар двигался
         }
@@ -87,12 +91,12 @@ const AudioPlayer = () => {
             />
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.currentTime }>
-                    {calculateTime(currentTime)}
+                    { calculateTime(currentTime) }
                 </div>
             </Typography>
             <Typography variant="body2" color="#fafafa" component="div">
                 <div className = { styles.duration }>
-                    {(duration && !isNaN(duration)) && calculateTime(duration)} {/* убираем ошибку nan nan когда пытается отобразить, до того как загружается */}
+                    { (duration && !isNaN(duration)) && calculateTime(duration) } {/* убираем ошибку nan nan когда пытается отобразить, до того как загружается */}
                 </div> 
             </Typography>
         </div>

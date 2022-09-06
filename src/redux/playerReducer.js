@@ -5,6 +5,7 @@ const ADD_LIKE = "ADD_LIKE"
 const PLAY_TRACK = "PLAY_TRACK"
 const IS_OPEN_LIST = "IS_OPEN_LIST"
 const NEXT_TRACK = "NEXT_TRACK"
+// const TOGGLE_PLAY_PAUSE = "TOGGLE_PLAY_PAUSE"
 
 const requestMusic = music.music
 const initialState = {
@@ -45,6 +46,9 @@ const playerReducer = (state = initialState, action) => {
             return { ...state, activeTrack }
         }
 
+        // case TOGGLE_PLAY_PAUSE:
+        //     return { ...state, isPlaying: !state.isPlaying }  
+
         default:
             return { state }
     }
@@ -55,5 +59,6 @@ export const addLike = (trackId) => ({ type: ADD_LIKE, trackId })
 export const playtrack = (trackId) => ({ type: PLAY_TRACK, trackId })
 export const isOpenList = () => ({ type: IS_OPEN_LIST })
 export const nextTrack = (trackId) => ({ type: NEXT_TRACK, trackId })
+// export const togglePlayPauseAC = () => ({ type: TOGGLE_PLAY_PAUSE })
 
 export default playerReducer

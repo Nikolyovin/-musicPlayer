@@ -1,0 +1,15 @@
+.playerWrap {
+    overflow-y: auto;
+    width: 50%;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: dimgrey;
+    z-index: 15;
+}
+
+.playerWrapNone {
+    display: none;
+    transition: 0.5s;
+}

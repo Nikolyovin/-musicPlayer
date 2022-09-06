@@ -19,6 +19,7 @@
     outline: none;
     margin: 0;
     display: block;
+    cursor: pointer;
 }
 
 /* progress bar - safari */
@@ -66,18 +67,6 @@
 
 /* knobby - chrome and safari */
 .progressBar::-webkit-slider-thumb {
-    /* -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--knobby);
-    cursor: pointer;
-    position: relative;
-    margin: -2px 0 0 0;
-    z-index: 3;
-    box-sizing: border-box; */
-
     visibility: hidden;
 }
 
