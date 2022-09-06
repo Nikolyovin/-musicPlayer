@@ -5,7 +5,7 @@ import { grey } from "@mui/material/colors"
 import SkipNextIcon from '@mui/icons-material/SkipNext'
 
 const Buttons = ({ togglePlayPause, isPlaying, playNextTrack, currentTrack }) => {
-   console.log('currentTrack:', currentTrack)
+    
     return (
         <div className = { styles.buttonWrap }>
             <button 

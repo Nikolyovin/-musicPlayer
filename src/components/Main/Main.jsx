@@ -1,24 +1,13 @@
-import { useState } from "react"
-import VisualixerFunc from "./Equalizer/VisualixerFunc"
+import Visualizer from "./Visualizer/Visualizer"
 import styles from "./Main.module.css"
-import Player from "./Player/Player"
+import Playlist from "./Playlist/Playlist"
 
 const Main = ({ setContext, audioRef }) => {
-    
-    
-    console.log('audioRefMain:', audioRef)
-
 
     return (
         <div className = { styles.mainWrap}>
-            {/* <EqualizerClassMicro/> */}
-            {/* <EqualizerClass/> */} 
-            <VisualixerFunc audioRef = { audioRef } setContext = { setContext }/>
-            {/* <EqualizerOld/> */}
-            {/* <VisualizerHabr/> */}
-            {/* <Visualizer/> */}
-            {/* <Vis/> */}
-            <Player />
+            <Visualizer audioRef = { audioRef } setContext = { setContext }/>
+            <Playlist />
         </div>
     )
 }

@@ -1,8 +1,4 @@
 .mainWrap {
     display: flex;
     justify-content: space-between;
-    /* height: 909px; */
-    /* height: calc(100% - 150px); */
-    /* padding: 0 0 130px 0; */
-    /* min-height: calc(100% - 150px); */
 }

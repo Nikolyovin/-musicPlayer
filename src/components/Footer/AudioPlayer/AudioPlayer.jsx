@@ -1,28 +1,23 @@
 import styles from "./AudioPlayer.module.css"
 import { useEffect, useRef, useState } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import { calculateTime } from "../../../lib/helpers"
 import { Typography } from "@mui/material"
-import AudioPlayerButtons from "./ControlPanel/Buttons/Buttons"
 import ControlPanel from "./ControlPanel/ControlPanel"
 import { togglePlayPauseAC } from "../../../redux/playerReducer"
 
 //www.w3schools.com html reference audio/video
 const AudioPlayer = ({ context,  setAudioRef }) => {
-    const [isPlaying, setIsPlaying] = useState(false)
-    const [duration, setDuration] = useState(0)
-    const [currentTime, setCurrentTime] = useState(0)
+    const [ isPlaying, setIsPlaying ] = useState(false)
+    const [ duration, setDuration ] = useState(0)
+    const [ currentTime, setCurrentTime ] = useState(0)
 
     const currentTrack = useSelector((state) => state.player.activeTrack) 
     const source = currentTrack?.track
 
-    const audioPlayer = useRef();   // reference our audio component
-    const progressBar = useRef();   // reference our progress bar
-    const animationRef = useRef();  // reference the animation
-
-    const dispatch = useDispatch()
-
-    // const context = new (window.AudioContext || window.webkitAudioContext)() // контекст для визуализатора завука
+    const audioPlayer = useRef()   // reference our audio component
+    const progressBar = useRef()   // reference our progress bar
+    const animationRef = useRef()  // reference the animation
 
     useEffect(() => {    
         setIsPlaying(false)
@@ -38,27 +33,16 @@ const AudioPlayer = ({ context,  setAudioRef }) => {
         progressBar.current.max = seconds;              //делаем максимальное значение прогрессбара равное продолжительности трека
     }
 
-    const togglePlayPause = () =>{
-        // console.log('context1:', context.state)
-        // context.state === "running" ? context.suspend() : context.resume()
-        // setContext(context)
-        // console.log('context2:', context.state)
+    const togglePlayPause = () => {
         const prevValue = isPlaying
         setIsPlaying(!prevValue)
-        dispatch(togglePlayPauseAC())
         
         if (!prevValue) {
-            console.log('context1:', context.state)
             context.resume()
-            // setContext(context)
-            console.log('context2:', context.state)
             audioPlayer.current.play()
             animationRef.current = requestAnimationFrame(whilePlaying)                   //нужно чтобы прогресс бар двигался
         } else {
-            console.log('context1:', context.state)
             context.suspend()
-            // setContext(context)
-            console.log('context2:', context.state)
             audioPlayer.current.pause()
             cancelAnimationFrame(animationRef.current)                                  //нужно чтобы прогресс бар двигался
         }

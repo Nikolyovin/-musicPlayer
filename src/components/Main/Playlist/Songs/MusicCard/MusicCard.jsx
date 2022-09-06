@@ -4,20 +4,12 @@ import { playtrack } from "../../../../../redux/playerReducer"
 import styles from "../Songs.module.css"
 
 const MusicCard = ({ currentTrack, setAudioRef, audioRef, ...props }) => {
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
     const { cover, name, id, band } = currentTrack
-
-    const onClickTrack = () => {
-        
-        dispatch(playtrack(id)) 
-    }
+    // const onClickTrack = () => dispatch(playtrack(id)) 
     
     return (
-        
-        <div 
-            className = { props?.styleColor ? styles.MusicCardWrapFooter : styles.MusicCardWrap } 
-            onClick = { onClickTrack }
-        >
+        <div className = { props?.styleColor ? styles.MusicCardWrapFooter : styles.MusicCardWrap } >
             <img src = { cover } className = { styles.cover}/>
             <div className = { styles.text }>
                 <Typography component="div" variant="body2" color="#fafafa">

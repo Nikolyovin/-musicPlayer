@@ -14,6 +14,8 @@ const Song = ({ currentTrack, setAudioRef }) => {
     const audioRef = useRef(null)
     const [ duration, setDuration ] = useState(0)
     const { track, isLike, id } = currentTrack
+
+    const onClickTrack = () => dispatch(playtrack(id)) 
     
     const onLoadedMetadata = () => {
         setDuration(audioRef.current.duration) //делаем максимальное значение прогрессбара равное продолжительности трека
@@ -26,7 +28,7 @@ const Song = ({ currentTrack, setAudioRef }) => {
                 src = { track } 
                 ref = { audioRef } 
             />           
-            <div className = { styles.songWrap } id = {styles.sondWrapId} >
+            <div onClick = { onClickTrack } className = { styles.songWrap } id = {styles.sondWrapId} >
                     <MusicCard  
                         currentTrack = { currentTrack }
                         audioRef = { audioRef }
