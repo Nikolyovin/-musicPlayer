@@ -5,10 +5,7 @@ import { grey } from "@mui/material/colors"
 import SkipNextIcon from '@mui/icons-material/SkipNext'
 
 const Buttons = ({ togglePlayPause, isPlaying, playNextTrack, currentTrack }) => {
-<<<<<<< HEAD
-=======
     
->>>>>>> testBranch
     return (
         <div className = { styles.buttonWrap }>
             <button 

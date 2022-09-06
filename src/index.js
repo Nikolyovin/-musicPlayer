@@ -8,10 +8,6 @@ import { store } from './redux/redux-store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-<<<<<<< HEAD
-const root = ReactDOM.createRoot(document.getElementById('root'));
-=======
->>>>>>> testBranch
 root.render(
   <React.StrictMode>
     <Provider store = { store }>
