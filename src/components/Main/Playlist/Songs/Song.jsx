@@ -8,6 +8,7 @@ import { addLike, playtrack } from "../../../../redux/playerReducer"
 import { useEffect, useRef, useState } from "react"
 import { calculateTime } from "../../../../lib/helpers"
 import MusicCard from "./MusicCard/MusicCard"
+import Divider from '@mui/material/Divider'
 
 const Song = ({ currentTrack, setAudioRef }) => {
     const dispatch = useDispatch()
@@ -23,6 +24,7 @@ const Song = ({ currentTrack, setAudioRef }) => {
 
     return (
         <>
+        <Divider/>
             <audio                                      /* нужно чтобы достать duration */
                 onLoadedMetadata = { onLoadedMetadata } 
                 src = { track } 
@@ -38,14 +40,16 @@ const Song = ({ currentTrack, setAudioRef }) => {
                 <div className = { styles.songOtherInfo } >
                     { 
                         isLike
-                        ? <FavoriteIcon sx={{ color: grey[ 500 ] }} onClick = { () => dispatch(addLike(id)) }/>
-                        : <FavoriteBorderIcon sx={{ color: grey[ 500 ] }} onClick = { () => dispatch(addLike(id)) }/>
+                        ? <FavoriteIcon sx={{ color: grey[ 50 ] }} onClick = { () => dispatch(addLike(id)) }/>
+                        : <FavoriteBorderIcon sx={{ color: grey[ 50 ] }} onClick = { () => dispatch(addLike(id)) }/>
                     }
-                    <Typography variant="body2" color="#9e9e9e" component="div">
+                    <Typography variant="body2" color="#fafafa" component="div">
                         { calculateTime(duration) }
                     </Typography>
                 </div>
+                
             </div>
+            <Divider/>
         </>
     )        
 }

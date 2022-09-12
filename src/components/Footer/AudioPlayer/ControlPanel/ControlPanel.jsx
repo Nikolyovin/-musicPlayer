@@ -6,6 +6,7 @@ import { grey } from "@mui/material/colors"
 import stylesButton from "./Buttons/Buttons.module.css"
 import { useDispatch } from "react-redux"
 import { isOpenList, nextTrack } from "../../../../redux/playerReducer"
+import { Button } from "@mui/material"
 
 const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack, setIsPlaying }) => {
     const dispatch = useDispatch()
@@ -36,9 +37,16 @@ const ControlPanel = ({ togglePlayPause, isPlaying, currentTrack, setIsPlaying }
                     : <></>
                 }
             </div>
-            <div onClick = { toggelePlaylist } className = { stylesButton.button } >
+            <Button 
+                onClick = { toggelePlaylist } 
+                variant="contained"
+                color="secondary"
+                sx = {{ mr:1}}
+                // className = { stylesButton.button } 
+
+            >
                 <ListIcon fontSize="large" sx={{ color: grey[500] }}/>
-            </div>
+            </Button>
         </div>
     )      
 }

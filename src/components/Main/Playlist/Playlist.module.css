@@ -10,6 +10,7 @@
 }
 
 .playerWrapNone {
-    display: none;
+    /* display: none; */
+    display: flex;
     transition: 0.5s;
 }
