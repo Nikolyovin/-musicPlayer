@@ -1,4 +1,5 @@
 .mainWrap {
     display: flex;
     justify-content: space-between;
+    /* padding: 64px 0 130px 0; */
 }

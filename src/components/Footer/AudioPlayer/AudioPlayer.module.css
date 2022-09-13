@@ -3,9 +3,9 @@
 }
 
 .progressBar {
-    --bar-bg: #757575;
+    --bar-bg: #bbdefb;
     --seek-before-width: 0;
-    --seek-before-color: #bf360c;
+    --seek-before-color: #9c27b0;
     --knobby: #3452a5;
     --selectedKnobby: #26c9c3;
     --bar-height: 30px;
@@ -55,7 +55,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 10;
     cursor: pointer;
 }
 
@@ -63,6 +63,7 @@
 .progressBar::-moz-range-progress {
     background-color: var(--seek-before-color);
     height: var(--bar-height);
+    z-index: 10;
 }
 
 /* knobby - chrome and safari */
@@ -92,14 +93,14 @@
     position: absolute;
     top: 6px;
     left: 10px;
-    z-index: 3;
+    z-index: 11;
 }
 
 .duration {
     position: absolute;
     top: 6px;
     right: 10px;
-    z-index: 3;
+    z-index: 11;
 }
 
 .buttonWrap {

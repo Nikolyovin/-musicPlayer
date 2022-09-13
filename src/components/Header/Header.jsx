@@ -1,13 +1,17 @@
-import { Typography } from "@mui/material"
+import { AppBar, createTheme, Toolbar, Typography } from "@mui/material"
 import styles from "./Header.module.css"
 
 const Header = () => {
+
     return (
-        <header className = { styles.header }>
-            <Typography className = { styles.title } component="div" variant="h4" color="#fafafa">
-                Homemade Audio Player 
-            </Typography>
-        </header>
+        
+        <AppBar position="sticky">
+            <Toolbar sx = {{ justifyContent:"center" }}>
+                <Typography component="div" variant="h4" >
+                    Homemade Audio Player 
+                </Typography>
+            </Toolbar>
+        </AppBar> 
     )
 }
 

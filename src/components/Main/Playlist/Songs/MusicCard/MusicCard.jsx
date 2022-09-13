@@ -15,7 +15,7 @@ const MusicCard = ({ currentTrack, setAudioRef, audioRef, ...props }) => {
                 <Typography component="div" variant="body2" color="#fafafa">
                     { name }
                 </Typography>
-                <Typography variant="body2" color="#9e9e9e" component="div">
+                <Typography variant="body2" color="#fafafa" component="div">
                     { band }
                 </Typography>
             </div>
