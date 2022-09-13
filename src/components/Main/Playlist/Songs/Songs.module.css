@@ -5,6 +5,16 @@
     cursor: pointer;
 }
 
+/* @media screen and (min-height: 800px) {
+    .songWrap {
+        height: 45px;
+    }
+    .text {
+        padding: 5px 5px 5px 2px;
+       
+    }
+} */
+
 #sondWrapId:hover {
     background-color: #64b5f6; 
     transition: 0.5s;

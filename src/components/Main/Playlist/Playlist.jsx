@@ -26,11 +26,12 @@ const Playlist = ({ setAudioRef }) => {
                 width: drawerWidth,
                 zIndex: 5,
                 flexDirection:"column",
-                // padding: "64px 0 130px 0",
+                padding: "64px 0 130px 0",
                 '& .MuiDrawer-paper': {
                     backgroundColor: "#2196f3",
                     justifyContent: "center",
-                    
+                    padding: "0 0 66px 0",
+                    overflow:'visible '
                 },
                 }}
                 variant="persistent"
